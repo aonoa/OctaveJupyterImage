@@ -9,14 +9,15 @@ ENV NB_USER vmuser
 USER root
 WORKDIR /root/
 
-RUN add-apt-repository ppa:octave/stable \
-    apt-get update \
+RUN add-apt-repository ppa:octave/stable \ 
+    && apt-get update \
     && apt-get install --no-install-recommends -y \
     octave \
     &&  apt-get purge -y --auto-remove  \
     &&  apt-get clean \
     &&  rm -rf /var/lib/apt/lists/*
-    
+
+
 USER $NB_USER
 WORKDIR /home/$NB_USER
 
