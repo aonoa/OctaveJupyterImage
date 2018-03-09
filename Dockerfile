@@ -10,7 +10,10 @@ USER root
 WORKDIR /root/
 
 RUN apt-get update \
-    && add-apt-repository ppa:octave/stable \ 
+    && apt-get install --no-install-recommends -y  \
+    software-properties-common
+    
+RUN add-apt-repository ppa:octave/stable \ 
     && apt-get update \
     && apt-get install --no-install-recommends -y \
     octave \
