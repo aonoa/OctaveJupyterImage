@@ -35,7 +35,7 @@ RUN add-apt-repository ppa:octave/stable \
     &&  apt-get clean \
     &&  rm -rf /var/lib/apt/lists/*
 
-RUN rm -rf RUN mkdir -p /home/$NB_USER/tmp
+RUN rm -rf /home/$NB_USER/tmp
 
 USER $NB_USER
 WORKDIR /home/$NB_USER
