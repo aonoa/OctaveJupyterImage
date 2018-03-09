@@ -19,7 +19,9 @@ RUN apt-get update \
     libarpack2-dev \
     libqrupdate-dev \
     libreadline-dev \
-    texinfo
+    texinfo \
+    openjdk-8-jre-headless \
+    ca-certificates-java
     
 RUN add-apt-repository ppa:octave/stable \ 
     && apt-get update \
