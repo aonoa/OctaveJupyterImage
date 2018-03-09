@@ -12,7 +12,14 @@ WORKDIR /root/
 RUN apt-get update \
     && apt-get install --no-install-recommends -y  \
     software-properties-common \
-    python-software-properties
+    python-software-properties \
+    gfortran \
+    libfftw3-dev \
+    libfltk1.3-dev \
+    libarpack2-dev \
+    libqrupdate-dev \
+    libreadline-dev \
+    texinfo
     
 RUN add-apt-repository ppa:octave/stable \ 
     && apt-get update \
