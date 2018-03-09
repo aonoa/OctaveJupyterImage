@@ -11,7 +11,8 @@ WORKDIR /root/
 
 RUN apt-get update \
     && apt-get install --no-install-recommends -y  \
-    software-properties-common
+    software-properties-common \
+    python-software-properties
     
 RUN add-apt-repository ppa:octave/stable \ 
     && apt-get update \
