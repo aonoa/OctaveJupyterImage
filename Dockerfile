@@ -9,7 +9,8 @@ ENV NB_USER vmuser
 USER root
 WORKDIR /root/
 
-RUN add-apt-repository ppa:octave/stable \ 
+RUN apt-get update \
+    && add-apt-repository ppa:octave/stable \ 
     && apt-get update \
     && apt-get install --no-install-recommends -y \
     octave \
