@@ -26,7 +26,8 @@ RUN apt-get update \
     ca-certificates-java \
     texlive-base \
     texlive-latex-recommended \
-    gnuplot
+    gnuplot \
+    fltk
     
 RUN add-apt-repository ppa:octave/stable \ 
     && apt-get update \
@@ -53,7 +54,9 @@ RUN pyenv global 3.5.2
 RUN pip install octave_kernel
 
 RUN rm -rf /home/$NB_USER/.cache \
-    && rm -rf /home/$NB_USER/tmp
+    && rm -rf /home/$NB_USER/tmp \
+    && mkdir -p /home/$NB_USER/tmp
+
     
 EXPOSE 8886
 
