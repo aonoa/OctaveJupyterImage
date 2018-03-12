@@ -25,7 +25,8 @@ RUN apt-get update \
     openjdk-8-jre-headless \
     ca-certificates-java \
     texlive-base \
-    texlive-latex-recommended
+    texlive-latex-recommended \
+    gnuplot
     
 RUN add-apt-repository ppa:octave/stable \ 
     && apt-get update \
