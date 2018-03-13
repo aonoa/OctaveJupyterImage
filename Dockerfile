@@ -27,7 +27,7 @@ RUN apt-get update \
     texlive-base \
     texlive-latex-recommended \
     gnuplot \
-    fltk
+    libfltk1.3
     
 RUN add-apt-repository ppa:octave/stable \ 
     && apt-get update \
